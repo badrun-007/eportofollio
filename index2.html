@@ -1,131 +1,210 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio 2 - Bintang Ramadhan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
-        .gold-gradient { background: linear-gradient(135deg, #D4AF37 0%, #F1C40F 100%); }
+        .glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
         html {
-        scroll-behavior: smooth; /* Ini kuncinya agar efeknya slide pelan, bukan lompat */
-    }
-    .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
-    .gold-gradient { background: linear-gradient(135deg, #D4AF37 0%, #F1C40F 100%); }
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-500 selection:text-white">
 
-    <nav class="fixed w-full z-50 glass border-b border-emerald-100">
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed w-full z-50 glass border-b border-emerald-100/80">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <span class="text-xl font-black text-emerald-800 tracking-tighter uppercase">Bintang Ramadhan</span>
+            
+            <!-- Desktop Menu -->
             <div class="space-x-8 text-sm font-semibold text-slate-600">
                 <a href="index.html" class="hover:text-emerald-600 transition">Portfolio 1</a>
                 <a href="index2.html" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition">Portfolio 2</a>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="block md:hidden text-slate-600 hover:text-emerald-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-emerald-100 bg-white/95 backdrop-blur-md px-6 py-4 space-y-4 shadow-inner">
+            <a href="#profil" class="block text-sm font-semibold text-slate-600 hover:text-emerald-600 py-2 transition">Profil Guru</a>
+            <a href="#artefak" class="block text-sm font-semibold text-slate-600 hover:text-emerald-600 py-2 transition">Analisis Artefak (PjBL)</a>
+            <a href="#filosofi" class="block text-sm font-semibold text-slate-600 hover:text-emerald-600 py-2 transition">Filosofi Mengajar</a>
+            <a href="#refleksi" class="block text-center text-sm font-semibold bg-emerald-600 text-white px-5 py-2.5 rounded-full hover:bg-emerald-700 transition">Refleksi Akhir</a>
         </div>
     </nav>
 
-    <section class="pt-32 pb-20 px-6">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2 space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-bold uppercase tracking-widest">
-                    <span>Informatika Educator</span>
-                </div>
-                <h1 class="text-6xl font-extrabold leading-tight">Membangun Masa Depan <br><span class="text-emerald-600">Lewat Teknologi.</span></h1>
-                <p class="text-lg text-slate-600 leading-relaxed">Calon pendidik profesional yang fokus pada inovasi pembelajaran Informatika melalui pendekatan berbasis masalah dan analitik data.</p>
-                <div class="flex gap-4">
-                   <a href="#porto" class="px-8 py-3 bg-emerald-700 text-white font-bold rounded-lg hover:shadow-xl hover:bg-emerald-800 transition block text-center">
-        Lihat Portofolio
-    </a>
-                    <button class="px-8 py-3 border border-slate-300 font-bold rounded-lg hover:bg-slate-100 transition">Unduh CV</button>
-                </div>
-            </div>
-            
-            <div class="md:w-1/2 relative">
-                <div class="absolute inset-0 bg-gradient-to-tr from-emerald-400 to-yellow-300 rounded-3xl transform rotate-3 opacity-20"></div>
-                <div class="relative bg-white p-2 rounded-3xl shadow-2xl">
-                    <img src="image/fotob.jpeg" alt="Bintang Ramadhan" class="w-full h-80 object-cover rounded-2xl shadow-inner">
-                </div>
-            </div>
+    <!-- HERO SECTION -->
+    <header class="pt-32 pb-20 bg-gradient-to-b from-emerald-50 via-white to-slate-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">
+                E-Portfolio 2 &bull; Penugasan UAS
+            </span>
+            <h1 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+                Refleksi Inovasi Pembelajaran <br><span class="text-emerald-700">Siklus 3 Berbasis PjBL</span>
+            </h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                Dokumentasi dan analisis kritis terhadap pelaksanaan Praktik Pengalaman Lapangan (PPL) Terbimbing di SMAN 12 Bandung dengan implementasi Project Based Learning.
+            </p>
         </div>
-    </section>
-    
-    <section class="max-w-4xl mx-auto px-6 py-20">
-    <div class="bg-white p-12 rounded-3xl border border-slate-100 shadow-sm relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-2 h-full bg-yellow-500"></div>
-        
-        <h2 class="text-3xl font-bold mb-8 text-emerald-900">Tentang Saya</h2>
-        
-        <div class="space-y-6 text-slate-700 leading-relaxed text-lg">
-            <p style="text-align: justify;"><strong>Akar Budaya dan Identitas:</strong><br>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-4xl mx-auto px-6 space-y-24 pb-24">
+
+        <!-- SECTION 1: PROFIL MAHASISWA -->
+        <section id="profil" class="scroll-mt-24">
+            <div class="border-l-4 border-emerald-600 pl-4 mb-6">
+                <h2 class="text-2xl font-bold text-slate-900">Profil Calon Guru Profesional</h2>
+            </div>
+            <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm space-y-4">
+                <p style="text-align: justify;"><strong>Akar Budaya dan Identitas:</strong><br>
 Perkenalkan, nama saya <strong>Bintang Ramadhan</strong>. Saya menghabiskan masa kecil di Bandung, sebuah kota yang membentuk intuisi kreativitas saya. Namun, masa remaja saya hingga pendewasaan diri berlangsung di Pangalengan, sebuah wilayah yang bertransformasi dari kawasan agraris yang tenang menjadi destinasi pariwisata yang dinamis. Hidup di tengah perpaduan antara kearifan lokal masyarakat petani dan pesatnya arus pariwisata mengajarkan saya tentang pentingnya adaptabilitas. Nilai-nilai ini menjadi jangkar dalam cara saya memandang pendidikan: bahwa setiap perubahan lingkungan harus direspon dengan kesiapan diri yang tangguh dan karakter yang inklusif.</p>
 
 <p style="text-align: justify;"><strong>Latar Belakang:</strong><br>
 Latar belakang pendidikan saya di bidang Informatika murni sebuah disiplin ilmu yang saya cintai. Sejak kuliah, fokus saya lebih banyak pada pengembangan perangkat lunak, sistem informasi, dan pemanfaatan teknologi untuk menyelesaikan berbagai permasalahan. Sejujurnya, profesi guru bukanlah cita-cita utama saya sejak awal. Saya lebih membayangkan diri berkarier sebagai pengembang sistem atau praktisi teknologi informasi. Namun, kegelisahan saya muncul saat melihat realitas di lapangan: salah satunya banyak remaja yang terjebak dalam arus negatif dunia digital, mulai dari penyalahgunaan data pribadi hingga konten sensitif yang berujung pada ancaman. Anak-anak kita mahir menggunakan teknologi, namun seringkali gagal memahami risiko di baliknya. Dari sinilah, hati saya tergerak untuk beralih menjadi pendidik. Saya memiliki misi besar: mengubah paradigma murid, dari sekadar 'pengguna pasif' teknologi menjadi 'pencipta' yang cerdas. Informatika bagi saya bukan sekadar barisan kode, melainkan medium untuk membangun pola pikir kritis dan kesadaran digital. Saya berkomitmen menjadi pendidik yang membimbing generasi penerus untuk menguasai teknologi, bukan "dikuasai" olehnya, guna masa depan yang lebih aman dan inovatif.</p>
-            
-            <blockquote class="italic text-emerald-800 font-semibold border-l-4 border-emerald-500 pl-4 my-8">
-                "Hayyatuna kulluha ibadah" 
-            </blockquote>
-        </div>
-    </div>
-</section>
-
-    <section id="porto" class="max-w-6xl mx-auto px-6 pb-20">
-    <h2 class="text-3xl font-bold mb-10 text-center">Jurnal Pembelajaran PPL</h2>
-    
-    <div class="grid md:grid-cols-3 gap-8">
-        
-        <div class="group p-8 rounded-3xl border border-slate-200 hover:border-emerald-300 transition bg-white hover:shadow-2xl">
-            <div class="text-yellow-500 font-black text-4xl mb-4">01</div>
-            <h3 class="text-xl font-bold mb-2">Siklus Pertama</h3>
-            <p class="text-slate-500 mb-6 text-sm">Implementasi Problem Based Learning dan apersepsi data.</p>
-            <a href="./siklus1.html" class="text-emerald-700 font-bold flex items-center gap-2">Baca Detail &rarr;</a>
-        </div>
-
-        <div class="group p-8 rounded-3xl border border-slate-200 hover:border-emerald-300 transition bg-white hover:shadow-2xl">
-            <div class="text-yellow-500 font-black text-4xl mb-4">02</div>
-            <h3 class="text-xl font-bold mb-2">Siklus Kedua</h3>
-            <p class="text-slate-500 mb-6 text-sm">Manajemen waktu dan aktivasi siswa pasif dalam diskusi.</p>
-            <a href="./siklus2.html" class="text-emerald-700 font-bold flex items-center gap-2">Baca Detail &rarr;</a>
-        </div>
-
-        <div class="group p-8 rounded-3xl border border-slate-200 hover:border-emerald-300 transition bg-white hover:shadow-2xl">
-            <div class="text-yellow-500 font-black text-4xl mb-4">03</div>
-            <h3 class="text-xl font-bold mb-2">Siklus Ketiga</h3>
-            <p class="text-slate-500 mb-6 text-sm">Inovasi modul kedua dan penerapan metode peer tutoring.</p>
-            <a href="./siklus3.html" class="text-emerald-700 font-bold flex items-center gap-2">Baca Detail &rarr;</a>
-        </div>
-
-    </div>
-</section>
-
-<section id="visi" class="max-w-4xl mx-auto px-6 pb-20">
-    <h2 class="text-3xl font-bold mb-10 text-center">Model Guru yang Dituju</h2>
-    <div class="bg-emerald-900 text-emerald-50 p-10 rounded-3xl">
-        <h3 class="text-2xl font-bold mb-4 text-yellow-400">Misi Saya sebagai Guru Profesional</h3>
-        <p style="text-align: justify;" class="mb-6 leading-relaxed">
-            Misi saya adalah menjadi guru Informatika yang mampu membimbing peserta didik untuk belajar melalui pengalaman nyata, berpikir logis, serta menghasilkan karya yang bermanfaat bagi masyarakat. Saya ingin menjadi fasilitator pembelajaran yang mendorong siswa untuk berani mencoba, memecahkan masalah, berinovasi, dan memanfaatkan teknologi secara bijak dalam kehidupan sehari-hari. Melalui pendekatan pembelajaran berbasis proyek, saya berupaya menciptakan lingkungan belajar yang aktif, kreatif, dan relevan dengan perkembangan dunia digital.
-        </p>
-        <div class="grid md:grid-cols-2 gap-6">
-            <div>
-                <h4 class="font-bold text-yellow-400">Kompetensi Utama:</h4>
-                <ul class="list-disc ml-5 space-y-2">
-                    <li>Pemrograman dan pengembangan aplikasi.</li>
-                    <li>Analisis data & penalaran komputasional.</li>
-                    <li>Pemanfaatan teknologi untuk inovasi pendidikan.</li>
-                </ul>
+                <div class="mt-6 p-4 bg-emerald-50/50 rounded-xl border border-emerald-100 text-center italic text-emerald-800 font-medium">
+                    "Hayyatuna kulluha ibadah"
+                </div>
             </div>
-            <div>
-                <h4 class="font-bold text-yellow-400">Karakter yang Dibangun:</h4>
-                <ul class="list-disc ml-5 space-y-2">
-                    <li>Berintegritas digital (Digital Ethics).</li>
-                    <li>Kreatif dalam menghasilkan solusi.</li>
-                    <li>Berpikir kritis dan sistematis.</li>
-                    <li>Kolaboratif dan solutif.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
+        <!-- SECTION 2: ANALISIS ARTEFAK -->
+        <section id="artefak" class="scroll-mt-24">
+            <div class="border-l-4 border-emerald-600 pl-4 mb-6">
+                <h2 class="text-2xl font-bold text-slate-900">Analisis Artefak Produk Perangkat Pembelajaran</h2>
+            </div>
+            <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm space-y-6">
+                <p class="text-slate-600 leading-relaxed text-justify">
+                    Pada Siklus 3, dilakukan transformasi fundamental pada perangkat pembelajaran (**Document3.docx**). Evaluasi mendalam dari Siklus 1 dan 2 (yang menggunakan model *Problem Based Learning*) menunjukkan bahwa penanganan siswa pasif belum optimal dan manajemen waktu presentasi masih sangat ketat. Oleh karena itu, perangkat dirancang ulang menggunakan model <strong>Project Based Learning (PjBL)</strong> untuk elemen Analisis Data Kelas XI.
+                </p>
+                
+                <div class="overflow-x-auto border border-slate-100 rounded-xl">
+                    <table class="w-full text-left text-sm text-slate-600">
+                        <thead class="bg-slate-50 text-xs uppercase font-bold text-slate-700 border-b border-slate-100">
+                            <tr>
+                                <th class="px-6 py-4">Aspek Analisis</th>
+                                <th class="px-6 py-4">Deskripsi Temuan & Tindakan Nyata</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr>
+                                <td class="px-6 py-4 font-semibold text-slate-900">Kendala Penyusunan</td>
+                                <td class="px-6 py-4">Merancang konversi alur sintaks dari pemecahan masalah (PBL) menjadi pembuatan produk nyata (PjBL) yang pas untuk durasi 2 JP tanpa membebani siswa di luar jam sekolah.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold text-slate-900">Pedagogi & Solusi</td>
+                                <td class="px-6 py-4">Menerapkan pembelajaran berbasis proyek kolaboratif. Siswa diwajibkan menyusun infografis visualisasi tren data digital secara mandiri berkelompok, sehingga memicu partisipasi aktif total.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold text-slate-900">Asesmen Autentik</td>
+                                <td class="px-6 py-4">Menyusun rubrik penilaian produk visualisasi data yang objektif serta lembar penilaian sikap kerja sama kelompok guna mengukur kontribusi individu secara adil.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <p class="text-slate-600 leading-relaxed text-justify">
+                    Hasil perombakan perangkat ini mendapatkan apresiasi tinggi dari Guru Pamong dengan raihan nilai **89,2 (Sangat Baik)**, membuktikan adanya peningkatan mutu perencanaan yang matang dan solutif.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: FILOSOFI MENGAJAR -->
+        <section id="filosofi" class="scroll-mt-24">
+            <div class="border-l-4 border-emerald-600 pl-4 mb-6">
+                <h2 class="text-2xl font-bold text-slate-900">Filosofi Mengajar (Ideologi Pendidik)</h2>
+            </div>
+            <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm space-y-6 text-slate-600 leading-relaxed text-justify">
+                <p>
+                    Filosofi mengajar saya berakar pada pemikiran Ki Hadjar Dewantara, yaitu <em>"Ing Ngarso Sung Tulodo, Ing Madyo Mangun Karso, Tut Wuri Handayani"</em>. Sebagai seorang guru Informatika, saya memandang peran saya bukan lagi sebagai satu-satunya sumber pengetahuan (*teacher-centered*), melainkan sebagai fasilitator dan mitra belajar yang berdiri di tengah-tengah siswa untuk membangun karsa, kreativitas, serta menuntun kodrat zaman peserta didik agar siap menghadapi era automasi global.
+                </p>
+                <p>
+                    Saya meyakini bahwa setiap peserta didik memiliki keunikan dan kecepatan belajar yang beragam (inklusif). Pendekatan konstruktivisme menjadi fondasi saya dalam menyusun skenario kelas, di mana pengetahuan dibangun secara aktif oleh siswa melalui interaksi nyata dengan masalah kontekstual dunia digital. Melalui model pembelajaran berbasis proyek (PjBL), saya menumbuhkan ruang eksplorasi yang demokratis agar siswa dapat berkolaborasi, bernalar kritis, dan berani menyuarakan ide kreatif mereka secara merdeka.
+                </p>
+                <p>
+                    Melalui proses pembelajaran terbimbing di SMAN 12 Bandung ini, keyakinan saya semakin kokoh bahwa mengajar bukan sekadar mentransfer materi kurikulum, melainkan menanamkan nilai-nilai karakter luhur dan literasi digital yang bijak. Inilah esensi ideologi pendidik yang akan terus saya bawa dalam perjalanan menuju guru profesional yang adaptif, berintegritas, dan berpusat penuh pada masa depan siswa.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: REFLEKSI AKHIR -->
+        <section id="refleksi" class="scroll-mt-24">
+            <div class="border-l-4 border-emerald-600 pl-4 mb-6">
+                <h2 class="text-2xl font-bold text-slate-900">Refleksi Akhir Praktik Mengajar (Siklus 3)</h2>
+            </div>
+            <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm space-y-6">
+                <p class="text-slate-600 leading-relaxed text-justify">
+                    Pelaksanaan pembelajaran pada Siklus 3 (**Document4.docx**) mencatat lompatan performa yang sangat sehat dan natural. Berdasarkan jurnal refleksi sebelumnya, kendala utama terletak pada siswa pasif dan ketepatan alokasi waktu kegiatan inti. Melalui penerapan PjBL, dinamika ruang kelas berubah secara positif.
+                </p>
+
+                <!-- GRID STATS REALISTIS -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl text-center">
+                        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Skor Siklus 1</div>
+                        <div class="text-3xl font-black text-slate-400">82,1</div>
+                        <div class="text-xs text-slate-400 mt-1">Kategori Baik</div>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl text-center">
+                        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Skor Siklus 2</div>
+                        <div class="text-3xl font-black text-slate-500">85,7</div>
+                        <div class="text-xs text-slate-400 mt-1">Kategori Baik</div>
+                    </div>
+                    <div class="p-6 bg-emerald-50 border border-emerald-100 rounded-2xl text-center">
+                        <div class="text-xs font-semibold text-emerald-700 uppercase tracking-wider mb-1">Skor Akhir Siklus 3</div>
+                        <div class="text-3xl font-black text-emerald-600">89,2</div>
+                        <div class="text-xs text-emerald-500 mt-1">Sangat Baik & Realistis</div>
+                    </div>
+                </div>
+
+                <div class="space-y-4 text-slate-600 text-justify leading-relaxed">
+                    <h3 class="text-lg font-bold text-slate-900">Umpan Balik & Catatan Kemajuan Guru Pamong:</h3>
+                    <ul class="list-disc list-inside space-y-2 pl-2">
+                        <li><strong class="text-emerald-700">Inovasi Metode Sukses:</strong> Pergantian ke model PjBL sangat efektif memicu keaktifan siswa pasif melalui pengerjaan visualisasi data berkelompok.</li>
+                        <li><strong class="text-emerald-700">Manajemen Waktu Meningkat:</strong> Alokasi waktu fase perencanaan dan pengerjaan tertata jauh lebih disiplin dari siklus awal.</li>
+                        <li><strong class="text-emerald-700">Rekomendasi UKin:</strong> Guru Pamong menyarankan untuk memperluas porsi waktu galeri produk/presentasi agar umpan balik antar-kelompok berjalan makin tajam pada ujian kinerja mendatang.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-center text-sm">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="font-semibold text-white mb-2">&copy; 2026 Bintang Ramadhan. All Rights Reserved.</p>
+            <p>E-Portfolio PPG Calon Guru Informatika &bull; SMAN 12 Bandung</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT MOBILE INTERACTIVE -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
