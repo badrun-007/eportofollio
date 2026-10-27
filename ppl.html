@@ -1,21 +1,449 @@
+
 <!doctype html>
-<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#174b39"><meta name="description" content="E-Portofolio PPG Bintang Ramadhan, perjalanan menjadi guru Informatika profesional."><title>PPL · E-Portfolio PPG</title><link rel="stylesheet" href="assets/css/style.css"></head><body>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174b39">
+  <meta name="description" content="E-Portofolio PPG Bintang Ramadhan, dokumentasi Praktik Pengalaman Lapangan di SMAN 12 Bandung.">
+
+  <title>PPL · E-Portfolio PPG</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #111827;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 260px;
+      padding: 24px;
+      text-align: center;
+      color: #fff;
+      background: #173d31;
+      border-radius: 14px;
+    }
+
+    .video-placeholder strong {
+      font-size: 1.1rem;
+    }
+
+    .video-placeholder span {
+      max-width: 480px;
+      line-height: 1.6;
+      opacity: .85;
+    }
+
+    .video-play-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .15);
+      font-size: 28px;
+    }
+
+    .artifact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .artifact {
+      padding: 20px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .artifact h3 {
+      margin-top: 0;
+    }
+
+    .artifact p {
+      line-height: 1.7;
+    }
+
+    .panel {
+      scroll-margin-top: 100px;
+    }
+
+    .video-note {
+      margin-top: 14px;
+      font-size: .9rem;
+      line-height: 1.7;
+      color: #64748b;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 16px;
+      border-left: 4px solid #b7791f;
+      border-radius: 6px;
+      background: #fffbeb;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .artifact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .video-placeholder {
+        min-height: 210px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
 <header class="site-header">
- <div class="container nav-wrap">
-  <a class="brand" href="index.html"><span class="brand-mark">BR</span><span>Bintang Ramadhan<small>E-Portfolio PPG</small></span></a>
-  <button class="menu-toggle" aria-expanded="false" aria-label="Buka menu">☰ Menu</button>
-  <nav class="nav-links" aria-label="Navigasi utama">
-   <a href="index.html">Beranda</a><a href="semester-1.html">Semester 1</a><a href="semester-2.html">Semester 2</a><a class="active" href="ppl.html">PPL</a><a href="lk4-karya-inovatif.html">Karya Inovatif</a>
-  </nav>
- </div>
+  <div class="container nav-wrap">
+
+    <a class="brand" href="index.html">
+      <span class="brand-mark">BR</span>
+      <span>
+        Bintang Ramadhan
+        <small>E-Portfolio PPG</small>
+      </span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      aria-expanded="false"
+      aria-label="Buka menu"
+      type="button">
+      ☰ Menu
+    </button>
+
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="semester-1.html">Semester 1</a>
+      <a href="semester-2.html">Semester 2</a>
+      <a class="active" href="ppl.html">PPL</a>
+      <a href="lk4-karya-inovatif.html">Karya Inovatif</a>
+    </nav>
+
+  </div>
 </header>
 
-<main><section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Beranda</a> / PPL</div><span class="eyebrow">Praktik mengajar mandiri</span><h1>Praktik Pengalaman Lapangan</h1><p>Dokumentasi rancangan pembelajaran dan video praktik mengajar. Video akan diputar langsung di halaman menggunakan Google Drive setelah ID file ditambahkan dan akses penonton diatur dengan benar.</p></div></section>
-<section class="container content-layout"><aside class="side-nav"><strong>Di halaman ini</strong><a href="#uts">UTS · Siklus 1</a><a href="#uas">UAS · Siklus 2–4</a><a href="#panduan-video">Panduan video Drive</a></aside><div class="content-stack">
- <div class="panel" id="uts"><span class="pill">PPL UTS · Siklus 1</span><h2>Praktik mengajar mandiri — Siklus 1</h2><p>Tempat untuk rancangan/perencanaan pembelajaran lengkap terbaik dari siklus 1, video pelaksanaan, serta analisis yang menjelaskan hubungan antara rencana dan praktik.</p><div class="video-placeholder" data-drive-id="" data-video-title="Video PPL Siklus 1"><div data-video-slot><div style="font-size:32px">▶</div><strong>Video Siklus 1 belum ditautkan</strong><span>Tambahkan ID file Google Drive pada konfigurasi halaman untuk mengaktifkan pemutar.</span></div></div><div class="spacer"></div><div class="artifact-grid"><div class="artifact"><h3>Rancangan pembelajaran</h3><p>Ganti placeholder dengan PDF perangkat pembelajaran terbaik siklus 1.</p><span class="pill pending">PDF belum ditambahkan</span></div><div class="artifact"><h3>Analisis pelaksanaan</h3><p>Uraikan keterlaksanaan rancangan, respons murid, bukti belajar, kendala, dan perbaikan yang direncanakan.</p><span class="pill pending">Analisis perlu dilengkapi</span></div></div></div>
- <div class="panel" id="uas"><span class="pill">PPL UAS · Siklus 2–4</span><h2>Praktik mengajar mandiri — Siklus 2 sampai 4</h2><p>Pilih dan tampilkan rancangan lengkap terbaik dari siklus 2–4 serta video pelaksanaan praktik mengajar dari rancangan yang dipilih. Siklus lain dapat disajikan sebagai bukti perkembangan jika relevan.</p><div class="video-placeholder" data-drive-id="" data-video-title="Video PPL Siklus 2 sampai 4"><div data-video-slot><div style="font-size:32px">▶</div><strong>Video PPL UAS belum ditautkan</strong><span>Tambahkan ID file Google Drive untuk menampilkan video di sini.</span></div></div><div class="spacer"></div><div class="artifact-grid"><div class="artifact"><h3>Rancangan terbaik siklus 2–4</h3><p>Unggah atau tautkan dokumen lengkap. Jika lebih dari satu rancangan ditampilkan, jelaskan mana yang dipilih sebagai produk utama.</p><span class="pill pending">PDF belum ditambahkan</span></div><div class="artifact"><h3>Analisis dan perkembangan</h3><p>Bandingkan perubahan praktik dari siklus sebelumnya dengan bukti yang benar-benar tersedia.</p><span class="pill pending">Analisis perlu dilengkapi</span></div></div></div>
- <div class="panel" id="panduan-video"><h2>Menautkan video Google Drive</h2><ol><li>Unggah video dan buka menu Bagikan.</li><li>Atur izin menjadi Pelihat bagi audiens yang memang boleh mengakses video, sesuai kebijakan sekolah dan privasi murid.</li><li>Salin ID file dari tautan Drive. ID adalah bagian di antara <code>/d/</code> dan <code>/view</code>.</li><li>Masukkan ID tersebut pada atribut <code>data-drive-id</code> di blok video halaman <code>ppl.html</code>.</li><li>Uji dari jendela privat atau akun lain. Jika kebijakan mengharuskan akses terbatas, jangan membuka video untuk publik; gunakan mekanisme berbagi yang disetujui.</li></ol><div class="notice">Jangan unggah video yang menampilkan identitas atau data murid tanpa memastikan izin dan kebijakan privasi sekolah.</div></div>
-</div></section></main>
+<main>
 
-<footer class="footer"><div class="container footer-row"><div><strong>Bintang Ramadhan</strong><p>E-Portfolio PPG Calon Guru Informatika · SMAN 12 Bandung</p><p>Dokumentasi proses belajar, praktik, refleksi, dan karya inovasi pendidikan.</p></div><div class="footer-links"><a href="semester-1.html">Semester 1</a><a href="semester-2.html">Semester 2</a><a href="ppl.html">PPL</a><a href="lk4-karya-inovatif.html">Karya Inovatif</a></div></div></footer>
-<script src="assets/js/main.js"></script></body></html>
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+
+      <div class="breadcrumb">
+        <a href="index.html">Beranda</a> / PPL
+      </div>
+
+      <span class="eyebrow">
+        Praktik mengajar mandiri
+      </span>
+
+      <h1>Praktik Pengalaman Lapangan</h1>
+
+      <p>
+        Dokumentasi pengalaman praktik mengajar sebagai calon guru
+        Informatika di SMAN 12 Bandung. Halaman ini memuat video praktik
+        mengajar, rancangan pembelajaran, serta refleksi perkembangan
+        kompetensi profesional selama pelaksanaan PPL.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="container content-layout">
+
+    <!-- SIDE NAVIGATION -->
+    <aside class="side-nav">
+      <strong>Di halaman ini</strong>
+
+      <a href="#video-praktik">
+        Video Praktik Mengajar
+      </a>
+
+      <a href="#uts">
+        UTS · Siklus 1
+      </a>
+
+      <a href="#uas">
+        UAS · Siklus 2–4
+      </a>
+
+      <a href="#panduan-video">
+        Informasi Dokumentasi
+      </a>
+    </aside>
+
+    <div class="content-stack">
+
+      <!-- VIDEO: HANYA SATU -->
+      <section class="panel" id="video-praktik">
+
+        <span class="pill">
+          Dokumentasi PPL
+        </span>
+
+        <h2>Video Praktik Mengajar</h2>
+
+        <p>
+          Video berikut merupakan dokumentasi pelaksanaan praktik
+          mengajar selama Praktik Pengalaman Lapangan di SMAN 12 Bandung.
+          Dokumentasi ini menjadi bukti pendukung untuk melihat penerapan
+          perencanaan pembelajaran dalam kegiatan pembelajaran.
+        </p>
+
+        <div
+          class="video-placeholder"
+          id="video-ppl"
+          data-drive-id="1f-Sz-KgWVpcwnMPkXfbY_CY9Gh_i_njx"
+          data-video-title="Video Praktik Mengajar PPL">
+
+          <div class="video-play-icon">▶</div>
+
+          <strong>Video Praktik Mengajar PPL</strong>
+
+          <span>
+            Pemutar video sedang disiapkan.
+          </span>
+
+        </div>
+
+        <p class="video-note">
+          Catatan: video ini merupakan dokumentasi praktik mengajar
+          yang tersedia, bukan rekaman seluruh siklus PPL. Dokumen
+          UTS dan UAS disajikan secara terpisah sesuai siklusnya.
+        </p>
+
+      </section>
+
+      <!-- PPL UTS -->
+      <section class="panel" id="uts">
+
+        <span class="pill">
+          PPL UTS · Siklus 1
+        </span>
+
+        <h2>Praktik Mengajar Mandiri — Siklus 1</h2>
+
+        <p>
+          Bagian ini menyajikan rancangan atau perencanaan pembelajaran
+          lengkap terbaik dari siklus 1. Perangkat pembelajaran digunakan
+          untuk menunjukkan proses perencanaan kegiatan belajar, mulai
+          dari tujuan pembelajaran, strategi pembelajaran, aktivitas
+          peserta didik, hingga asesmen.
+        </p>
+
+        <div class="artifact-grid">
+
+          <article class="artifact">
+            <h3>Rancangan Pembelajaran</h3>
+
+            <p>
+              Lampirkan dokumen perangkat pembelajaran lengkap yang
+              dipilih dari siklus 1. Dokumen dapat mencakup modul ajar,
+              bahan ajar, LKPD, media pembelajaran, dan instrumen asesmen
+              yang benar-benar digunakan.
+            </p>
+
+            <span class="pill pending">
+              Dokumen perlu ditambahkan
+            </span>
+          </article>
+
+          <article class="artifact">
+            <h3>Refleksi Pelaksanaan</h3>
+
+            <p>
+              Jelaskan hubungan antara perencanaan dan pelaksanaan
+              pembelajaran. Refleksi dapat membahas keterlaksanaan
+              aktivitas, respons peserta didik, kendala yang ditemukan,
+              serta hal yang perlu diperbaiki pada pembelajaran berikutnya.
+            </p>
+
+            <span class="pill pending">
+              Refleksi perlu dilengkapi
+            </span>
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- PPL UAS -->
+      <section class="panel" id="uas">
+
+        <span class="pill">
+          PPL UAS · Siklus 2–4
+        </span>
+
+        <h2>Praktik Mengajar Mandiri — Siklus 2 sampai 4</h2>
+
+        <p>
+          Bagian ini menyajikan rancangan pembelajaran lengkap terbaik
+          dari siklus 2 sampai 4. Rancangan dipilih berdasarkan kesesuaian
+          dengan tujuan pembelajaran, strategi yang digunakan, serta
+          bukti perkembangan praktik mengajar yang tersedia.
+        </p>
+
+        <div class="artifact-grid">
+
+          <article class="artifact">
+            <h3>Rancangan Pembelajaran Terbaik</h3>
+
+            <p>
+              Lampirkan perangkat pembelajaran lengkap yang dipilih
+              dari siklus 2–4. Jika terdapat beberapa rancangan,
+              jelaskan rancangan mana yang dijadikan produk utama
+              untuk penilaian PPL UAS.
+            </p>
+
+            <span class="pill pending">
+              Dokumen perlu ditambahkan
+            </span>
+          </article>
+
+          <article class="artifact">
+            <h3>Refleksi Perkembangan</h3>
+
+            <p>
+              Uraikan perubahan strategi pembelajaran dan perkembangan
+              kompetensi mengajar berdasarkan pengalaman pada siklus
+              sebelumnya. Sertakan bukti yang tersedia dan hindari
+              menyimpulkan perubahan yang tidak didukung dokumentasi.
+            </p>
+
+            <span class="pill pending">
+              Refleksi perlu dilengkapi
+            </span>
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- INFORMASI VIDEO -->
+      <section class="panel" id="panduan-video">
+
+        <h2>Informasi Dokumentasi</h2>
+
+        <p>
+          Dokumentasi PPL pada halaman ini menggunakan satu video
+          praktik mengajar. Video tersebut ditampilkan satu kali,
+          sedangkan dokumen rancangan pembelajaran untuk UTS dan UAS
+          tetap dikelompokkan berdasarkan siklus pelaksanaannya.
+        </p>
+
+        <div class="notice">
+          <strong>Perhatian terhadap privasi:</strong>
+          pastikan izin berbagi video sesuai dengan kebijakan sekolah
+          dan persetujuan yang diperlukan, terutama apabila video
+          menampilkan wajah, suara, nama, atau informasi peserta didik.
+          Jangan membuka akses publik jika hal tersebut tidak diizinkan.
+        </div>
+
+      </section>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-row">
+
+    <div>
+      <strong>Bintang Ramadhan</strong>
+
+      <p>
+        E-Portfolio PPG Calon Guru Informatika · SMAN 12 Bandung
+      </p>
+
+      <p>
+        Dokumentasi proses belajar, praktik, refleksi, dan karya
+        inovasi pendidikan.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <a href="semester-1.html">Semester 1</a>
+      <a href="semester-2.html">Semester 2</a>
+      <a href="ppl.html">PPL</a>
+      <a href="lk4-karya-inovatif.html">Karya Inovatif</a>
+    </div>
+
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+<!-- PEMUTAR GOOGLE DRIVE -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const videoContainer = document.getElementById("video-ppl");
+
+    if (!videoContainer) {
+      return;
+    }
+
+    const fileId = videoContainer.dataset.driveId;
+
+    if (!fileId || !/^[a-zA-Z0-9_-]+$/.test(fileId)) {
+      videoContainer.innerHTML = `
+        <strong>Video belum tersedia</strong>
+        <span>ID file Google Drive belum diatur dengan benar.</span>
+      `;
+      return;
+    }
+
+    const frame = document.createElement("iframe");
+
+    frame.src =
+      "https://drive.google.com/file/d/" +
+      encodeURIComponent(fileId) +
+      "/preview";
+
+    frame.title = videoContainer.dataset.videoTitle ||
+      "Video Praktik Mengajar PPL";
+
+    frame.allow = "autoplay; fullscreen; picture-in-picture";
+    frame.allowFullscreen = true;
+    frame.loading = "lazy";
+    frame.referrerPolicy = "strict-origin-when-cross-origin";
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "video-frame";
+    wrapper.appendChild(frame);
+
+    videoContainer.replaceWith(wrapper);
+  });
+</script>
+
+</body>
+</html>
